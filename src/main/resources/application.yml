@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: redis-caching-demo
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  cache:
+    type: redis
+    redis:
+      time-to-live: 60s   # default TTL for every cache entry
+      key-prefix: "demo::"
+      use-key-prefix: true
+
+logging:
+  level:
+    com.example.rediscache: INFO
